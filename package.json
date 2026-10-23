@@ -1,0 +1,41 @@
+{
+  "name": "ai-cv-playwright",
+  "version": "1.0.0",
+  "description": "Playwright E2E Test Automation for AI CV Analyzer",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:all-devices": "playwright test",
+    "test:chrome": "playwright test --project=\"Desktop Chrome\"",
+    "test:firefox": "playwright test --project=\"Desktop Firefox\"",
+    "test:mobile-chrome": "playwright test --project=\"Mobile Chrome\"",
+    "test:mobile-safari": "playwright test --project=\"Mobile Safari\"",
+    "test:e2e": "playwright test --project=\"Desktop Chrome\"",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen",
+    "install:browsers": "playwright install",
+    "test:auth": "playwright test tests/extended/authentication-edge.spec.ts tests/registration-login-flow.spec.ts --project=\"Desktop Chrome\"",
+    "test:upload": "playwright test tests/extended/resume-upload-edge.spec.ts",
+    "test:analysis": "playwright test tests/extended/ai-analysis-edge.spec.ts",
+    "test:profile": "playwright test tests/extended/profile-settings-edge.spec.ts",
+    "test:navigation": "playwright test tests/extended/navigation-session.spec.ts",
+    "test:protected-pages": "playwright test tests/extended/protected-pages-functional.spec.ts",
+    "test:password-reset": "playwright test tests/extended/password-reset.spec.ts",
+    "test:critical": "playwright test tests/critical-user-journey.spec.ts --project=\"Desktop Chrome\"",
+    "test:full-system": "playwright test tests/cv-upload.spec.ts tests/application-features.spec.ts --project=\"Desktop Chrome\"",
+    "test:features": "playwright test tests/application-features.spec.ts",
+    "test:jobs": "playwright test tests/jobs.spec.ts --project=\"Desktop Chrome\"",
+    "test:mobile": "playwright test tests/extended/mobile-ui.spec.ts",
+    "test:extended": "playwright test tests/extended"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^22.20.5",
+    "dotenv": "^16.6.1",
+    "tsx": "^4.23.15",
+    "typescript": "^5.6.3"
+  }
+}
